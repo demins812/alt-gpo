@@ -12,5 +12,5 @@
 
     - name: Install Midnight Commander (mc)
       package:
-        name: mc
+        name: nmap
         state: present
