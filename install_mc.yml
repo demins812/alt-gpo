@@ -1,16 +1,10 @@
----
-- name: Install Midnight Commander (mc) on Alt Linux
-  hosts: your_host_group
-  become: yes
-
+- hosts: local
+  remote_user: root
+  gather_facts: no
   tasks:
-    - name: Update the package cache
-      package:
-        name: ''
-        state: latest
-        update_cache: yes
-
-    - name: Install Midnight Commander (mc)
-      package:
-        name: nmap
-        state: present
+  - name: Upgrade system
+    apt_rpm:
+      update_cache: true
+      dist_upgrade: true
+      update_kernel: true
+      clean: true
