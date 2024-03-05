@@ -1,0 +1,16 @@
+---
+- name: Install Midnight Commander (mc) on Alt Linux
+  hosts: your_host_group
+  become: yes
+
+  tasks:
+    - name: Update the package cache
+      package:
+        name: ''
+        state: latest
+        update_cache: yes
+
+    - name: Install Midnight Commander (mc)
+      package:
+        name: mc
+        state: present
