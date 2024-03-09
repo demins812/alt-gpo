@@ -2,5 +2,5 @@
   remote_user: root
   tasks:
     - ansible.builtin.copy:
-        src: /etc/ansible/playbooks/1.txt
-        dest: /home/user/1.txt
+        src: "/etc/ansible/playbooks/1.txt"
+        dest: "/home/user/Рабочий стол/1.txt"
