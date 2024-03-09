@@ -1,7 +1,8 @@
 - hosts: all
   remote_user: root
   tasks:
-    copy:
-      src: /playbook/files/text.txt 
-      dest: /home/user/test.txt
+    - name: Copy file to remote host
+  copy:
+    src: /home/ubuntu/local/file.txt
+    dest: /home/user/file.txt
   
