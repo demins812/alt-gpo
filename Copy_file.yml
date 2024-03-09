@@ -2,5 +2,5 @@
   remote_user: root
   tasks:
     - ansible.builtin.copy:
-        src: /playbooks/files/test.txt
+        src: smb://192.168.0.136/public/playbooks/files/test.txt
         dest: /home/user/test.txt
