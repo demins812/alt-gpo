@@ -5,6 +5,5 @@
     apt_rpm:
       name: "{{ item }}"
       state: present
-      update_cache: yes
     loop: "{{ packages }}"  
     
