@@ -7,4 +7,4 @@
       name: "{{ item }}"
       state: present
       update_cache: yes
-    loop: "{{ apt_rpm }}"  
+    loop: "{{ packages }}"  
