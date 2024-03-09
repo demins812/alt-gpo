@@ -1,0 +1,10 @@
+- name :Install packages
+  hosts: all
+  become:yes
+  tasks:
+  - name: Install specified packages
+    apt_rpm:
+      name: "{{ item }}"
+      state: present
+      update_cache: yes
+    loop: "{{ apt_rpm }}"  
