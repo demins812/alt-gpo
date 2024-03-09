@@ -1,0 +1,6 @@
+- hosts: kadry
+  remote_user: root
+  gather_facts: no
+  tasks:
+  - name: ping my servers
+    ping:
