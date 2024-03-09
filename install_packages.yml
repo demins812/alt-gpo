@@ -1,7 +1,7 @@
 - hosts: all
   remote_user: root
   tasks:
-  - name: Update cache and install ifcplugin
+  - name: install 
     apt_rpm:
       name: "{{ item }}"
       state: present
