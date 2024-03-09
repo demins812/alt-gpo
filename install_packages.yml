@@ -1,9 +1,9 @@
--  hosts: all
-   become:yes
-   tasks:
-   - name: Install specified packages
-     apt_rpm:
-       name: "{{ item }}"
-       state: present
-       update_cache: yes
-     loop: "{{ packages }}"  
+- hosts: all
+  remote_user: root
+  tasks:
+  - name: Update cache and install ifcplugin
+    apt_rpm:
+      name: "{{ item }}"
+      state: present
+      update_cache: yes
+    loop: "{{ packages }}"  
