@@ -1,4 +1,4 @@
-- hosts: local
+- hosts: all
   remote_user: root
   tasks:
   - name: install 7-zip
