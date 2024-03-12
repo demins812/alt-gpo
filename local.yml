@@ -1,1 +1,8 @@
-
+- hosts: local
+  remote_user: root
+  tasks:
+  - name: install 7-zip
+    apt_rpm:
+      name: 7-zip
+      state: present
+      update_cache: yes
